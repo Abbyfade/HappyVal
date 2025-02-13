@@ -8,6 +8,9 @@ const totalSlides = document.querySelectorAll(".card").length;
 
 function updateSliderPosition() {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    
     prevBtn.style.display = currentIndex === 0 ? "none" : "block";
     nextBtn.style.display = currentIndex === totalSlides - 1 ? "none" : "block";
 }
